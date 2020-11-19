@@ -8,7 +8,7 @@ html, body{
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 .page_wrap{
@@ -32,10 +32,6 @@ header{
     padding-top: 40px;
 }
 
-header.h1{
-    margin-top: 30px;
-}
-
 footer{
     width: 100%;
     position: fixed;
@@ -46,4 +42,32 @@ footer{
     border-top: solid;
     border-top-color: #E5E5E5;
     border-top-width: 1px;
+}
+
+#icontray{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.icon_box{
+    display: block;
+    width: 25%;
+    text-align: center;
+    color: #999;
+    font-size: smaller;
+}
+
+#icon1 .icon_image{
+    background: url(../images/ticket-icon.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.icon_image{
+    height: 60%;
 }
