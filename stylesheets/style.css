@@ -44,6 +44,6 @@ footer{
     height: 83px;
     background: white;
     border-top: solid;
-    border-top-color: gray;
-    border-top-width: 2px;
+    border-top-color: #E5E5E5;
+    border-top-width: 1px;
 }
