@@ -5,10 +5,6 @@ function initScripts() {
     document.getElementById("knapp").addEventListener("click", myScript);
 }
 
-function drawTicketButtons() {
-    
-}
-
 function myScript() {
     console.log("myScriotsafd");
 }

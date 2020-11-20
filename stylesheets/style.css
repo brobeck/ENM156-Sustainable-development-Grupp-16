@@ -21,6 +21,8 @@ header{
     height: 162px;
     width: 100%;
 
+    margin-bottom: -40px;
+
     background: url(../images/header.png);
     background-position: center;
     background-size: cover;
@@ -62,7 +64,28 @@ footer{
 }
 
 #icon1 .icon_image{
-    background: url(../images/ticket-icon.png);
+    background: url(../images/biljetter-blue.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#icon2 .icon_image{
+    background: url(../images/buy-ticket-grey.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#icon3 .icon_image{
+    background: url(../images/reseplanering-grey.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#icon4 .icon_image{
+    background: url(../images/mittkonto-grey.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;

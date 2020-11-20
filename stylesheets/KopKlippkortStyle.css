@@ -1,0 +1,21 @@
+.rectangle {
+    height: 120px;
+    width: 60%;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    left: 66px;
+    top: 112px;
+    margin: auto;
+  }
+
+
+.choosezone{
+    position: sticky;
+    width: 375px;
+    height: 64px;
+    left: 0px;
+    top: 130px;
+
+    background: url(images\biljett-ikon.png);
+}
