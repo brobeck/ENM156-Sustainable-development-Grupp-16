@@ -17,30 +17,18 @@ body {
   width: 378px;
   height: 812px;
   position: relative;
-  background: url(../images/unused-tickets.svg);
+  background: url(../images/no-active-ticket.svg);
   background-repeat: no-repeat;
 }
 
 .btn {
   /* border: 1px solid red; */
   position: absolute;
-  left: 219px;
-  top: 191px;
-  width: 130px;
-  height: 69px;
-  border-radius: 15px;
-}
-.second {
-  top: 306px;
-}
-.third {
-  top: 421px;
-}
-.fourth {
-  top: 536px;
-}
-.fifth {
-  top: 651px;
+  left: 31px;
+  top: 121px;
+  width: 314px;
+  height: 80px;
+  border-radius: 8px;
 }
 
 .btn:hover {
