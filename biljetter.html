@@ -7,9 +7,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
     <link rel = "stylesheet" href = "stylesheets/style.css">
     <link rel = "stylesheet" href = "stylesheets/AktivTicketStyle.css">
-	<script src = "script/script.js"></script>
 </head>
-<body>
+<body class="background">
 	<div class = "page_wrap">
 		<header>
 			<h1>
@@ -17,11 +16,37 @@
 			</h1>
 		</header>
 		<div class="container">
-			<div class ="aktiveTicketBackground">
-			
+			<div class ="rectangle">
+				
+					<img src="images/biljettIkon.png" height="50px" width="50px">
+					x <a id="nrTickets">  </a>
+					Oanvända Biljetter
+				
 			</div>
-        </div>
+		</div>
 	</div>
+	
+	<main class="main-center">
+		<div class="wrapper">
+			<div class="numberOfTicketsBox">
+				<div class="numberOfTicketsBoxText">
+					1
+				</div>
+			</div>
+			<div class="numberOfTicketsType">
+				Ungdom
+			</div>
+		</div>
+
+		<br><br><br>
+		
+		<div class="active-ticket-container">
+			<img class="active-ticket" src="images/biljett.png">		
+			<div class="ticket-zone">Zon ABC</div>
+			<div class="ticket-type">2 ungdom</div>
+		</div>
+	</main>
+
 	<footer>
 		<div id="icontray">
 			<a class="icon_box" id = "icon1" href = "biljetter.html">
@@ -42,5 +67,7 @@
 			</a>
 		</div>
 	</footer>
+	<script> type = "text/javascript", src = "script/unusedTickets.js" </script>
+
 </body>
 </html>

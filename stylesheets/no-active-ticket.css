@@ -1,17 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  background-color: black;
-}
-
-.container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .page {
   width: 378px;
@@ -21,16 +7,20 @@ body {
   background-repeat: no-repeat;
 }
 
-.btn {
-  /* border: 1px solid red; */
-  position: absolute;
-  left: 31px;
-  top: 121px;
-  width: 314px;
-  height: 80px;
-  border-radius: 8px;
-}
-
-.btn:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
+.text {
+  /*position: absolute;*/ 
+  /*width: 97px;
+  height: 51px;
+  left: 187px;
+  top: 136px;*/
+  
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 23px;
+  text-align: center;
+  
+  color: #000000;
+  }
+  

@@ -11,9 +11,15 @@ body{
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
-.page_wrap{
+#page_wrap{
     min-height: 100%;
     background: #f3fcff;
+}
+
+#hej{
+    background: lime;
+    height: 20px;
+    width: 20px;
 }
 
 header{
@@ -33,6 +39,43 @@ header{
 
     padding-top: 40px;
 }
+
+/* rectangle */
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 30px;
+}
+
+.container_row{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+  .container_row:last-child{
+      margin-bottom: 0;
+  }
+
+.rectangle {
+    height: 80px;
+    width: 100%;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    margin: 0 8px;
+  }
+
+
 
 footer{
     width: 100%;
@@ -57,6 +100,7 @@ footer{
 
 .icon_box{
     display: block;
+    text-decoration: none;
     width: 25%;
     text-align: center;
     color: #999;
@@ -64,7 +108,7 @@ footer{
 }
 
 #icon1 .icon_image{
-    background: url(../images/biljetter-blue.png);
+    background: url(../images/ticket-icon.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -93,4 +137,37 @@ footer{
 
 .icon_image{
     height: 60%;
+}
+
+.main-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    background-color: #F3FCFF;
+}
+
+.active-ticket-container {
+    width: 320px;
+    /* display: none; */
+    position: relative;
+}
+
+.active-ticket {
+    width: 100%;
+}
+
+.ticket-zone {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+}
+
+.ticket-type {
+    position: absolute;
+    top: 100px;
+    right: 20px;
 }
