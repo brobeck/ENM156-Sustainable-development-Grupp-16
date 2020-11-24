@@ -9,47 +9,78 @@ html, body{
 
 body{
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
-}
-
-#page_wrap{
-    min-height: 100%;
-    background: #f3fcff;
-}
-
-#hej{
-    background: lime;
-    height: 20px;
-    width: 20px;
-}
-
-header{
-    box-sizing: border-box;
-    height: 162px;
-    width: 100%;
-
-    margin-bottom: -40px;
-
-    background: url(../images/header.png);
+    background: url(../images/background_tram_most_blur.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
 
-    text-align: center;
+
+.row-center {
+    display: flex;
+    justify-content: center;
+}
+.col-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    width: 100%;
+    height: 162px;
+    background: url(../images/header.png);
+    background-size: 100%;
     color: white;
+}
 
-    padding-top: 40px;
+.header-text {
+    font-size: 22px;
+}
+
+.display {
+    width: 378px;
+    height: 812px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#iphoneborder {
+    background: url(../images/iphoneborder.png);
+    z-index: 999;
+    width: 432px;
+    height: 1000px;
+    position: absolute;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
 }
 
 /* rectangle */
+.site-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .container{
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    box-sizing: border-box;
     padding: 0 30px;
+    box-sizing: border-box;
 }
 
 .container_row{
@@ -57,14 +88,22 @@ header{
     height: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
 }
 
-  .container_row:last-child{
-      margin-bottom: 0;
-  }
+.container_row.large_margin {
+    margin-bottom: px;
+}
+
+.container_row.cr_small_margin {
+    margin-bottom: 5px;
+}
+
+.container_row:last-child{
+    margin-bottom: 0;
+}
 
 .rectangle {
     height: 80px;
@@ -72,17 +111,44 @@ header{
     background-color: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 15px;
-    margin: 0 8px;
-  }
+    box-sizing: border-box;
+    padding: 10px;
+}
 
+.rectangle:not(:first-child) {
+    margin-left: 7px;
+}
 
+.rectangle:not(:last-child) {
+    margin-right: 7px;
+}
 
-footer{
+.rectangle.space_between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rectangle.space_between .rect_left {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+.rectangle.thin {
+    height: 60px;
+    border-radius: 10px;
+}
+
+.rectangle.lightgray {
+    background: #E5E5E5;
+}
+
+footer {
     width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    height: 83px;
+    margin-top: auto;
+    height: 83px; 
     background: white;
     border-top: solid;
     border-top-color: #E5E5E5;
@@ -90,21 +156,37 @@ footer{
 }
 
 #icontray{
-    height: 100%;
+    height: 70%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     box-sizing: border-box;
-    padding: 10px;
+    padding-top: 5px;
 }
 
 .icon_box{
     display: block;
     text-decoration: none;
-    width: 25%;
+    width: 20%;
     text-align: center;
     color: #999;
     font-size: smaller;
+}
+
+.icon_image{
+    height: 60%;
+}
+
+.icon_text {
+    font-size: 11px;
+}
+
+.icon_box:hover {
+    color:#00AAEB;
+}
+
+.blue #icon2.icon_image{
+    background: url(../images/buy-ticket-blue.png);
 }
 
 #icon1 .icon_image{
@@ -135,8 +217,32 @@ footer{
     background-repeat: no-repeat;
 }
 
-.icon_image{
-    height: 60%;
+#homebutton_center {
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#homebutton {
+    background: black;
+    height: 5px;
+    border-radius: 10px;
+    width: 130px;
+}
+
+
+.main-container {
+    background: #f3fcff;
+    position: relative;
+    flex: 1;
+}
+
+#main {
+    position: absolute;
+    top: -40px;
+    width: 100%;
+    /* height: calc(100% + 40px); */
 }
 
 .main-center {
@@ -152,22 +258,27 @@ footer{
 
 .active-ticket-container {
     width: 320px;
-    /* display: none; */
     position: relative;
+    top: 10px;
 }
 
 .active-ticket {
-    width: 100%;
+    height: 508px;
+    filter: drop-shadow( 0px 4px 10px rgba(0, 0, 0, .15));
 }
 
 .ticket-zone {
     position: absolute;
     top: 50px;
     left: 20px;
+    font-weight: 900;
+    font-size: 20px;
 }
 
 .ticket-type {
     position: absolute;
     top: 100px;
-    right: 20px;
+    right: 15px;
+    display: flex;
+    align-items: center;
 }

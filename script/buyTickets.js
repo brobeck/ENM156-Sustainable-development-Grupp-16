@@ -28,4 +28,11 @@ function drawTicketButtons() {
     container.appendChild(containerRow);
     container.appendChild(containerRow2);
     page.appendChild(container);
+
+    document.getElementById("punchRect").addEventListener("click", drawBuyPunchticket);
+}
+
+function drawBuyPunchticket() {
+    $("#main").empty();
+    $("#main").load("../buypunch.html");
 }

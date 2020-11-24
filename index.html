@@ -7,64 +7,47 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
 	<link rel = "stylesheet" href = "stylesheets/style.css">
 	<link rel = "stylesheet" href = "stylesheets/KopKlippkortStyle.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src = "script/buyTickets.js" defer></script>
+	<script src = "script/script.js" defer></script>
 </head>
 <body>
-	<div id = "page_wrap">
-		<header>
-			<h1>
-				Köp biljett
-			</h1>
-		</header>
-		<div id = "main"></div>
-		<!--<div class="container">
-			<div class="container_row">
-				<div class="rectangle">
-					Enkelbiljett
-				</div>
-				<div class="rectangle">
-					Periodbiljett
-				</div>
-			</div>
-			<div class="container_row">
-				<div class="rectangle">
-					Dygnsbiljett
-				</div>
-				<div class="rectangle">
-					Klippkort
-				</div>
-			</div>
-		</div>
-		
-			<div class ="rectangle">
-				<div class="choosezone"> 
-					<img src="biljett-ikon.png" width="50" height="50">
-						Välj Område
-				</div>
-			</div>-->
-	</div>
-	<footer>
-		<div id="icontray">
-			<a class="icon_box" id = "icon1" href = "biljetter.html">
-				<div class="icon_image"></div>
-				Biljetter
-			</a>
-			<a class="icon_box" id = "icon2"1 href = "index.html">
-				<div class="icon_image"></div>
-				Köp biljett
-			</a>
-			<a class="icon_box" id = "icon3">
-				<div class="icon_image"></div>
-				Reseplanering
-			</a>
-			<a class="icon_box" id = "icon4">
-				<div class="icon_image"></div>
-				Mitt konto
-			</a>
-		</div>
-	</footer>
+	<div class="site-container">
+		<div id="iphoneborder"></div>
+		<div class="display">
+			<header class="center">
+				<span class="header-text">Köp biljett</span>
+			</header>
 
-	<script src = "script/buyTickets.js"></script>
-	<script src = "script/script.js"></script>
+			<div class="main-container">
+				<div id="main"></div>
+			</div>
+
+			<footer>
+				<div id="icontray">
+					<a class="icon_box" id = "icon1" href = "biljetter.html">
+						<div class="icon_image"></div>
+						<span class="icon_text">Biljetter</span>
+					</a>
+					<a class="icon_box blue" id = "icon2" href = "index.html">
+						<div class="icon_image"></div>
+						<span class="icon_text">Köp biljett</span>
+					</a>
+					<a class="icon_box" id = "icon3">
+						<div class="icon_image"></div>
+						<span class="icon_text">Reseplanering</span>
+					</a>
+					<a class="icon_box" id = "icon4">
+						<div class="icon_image"></div>
+						<span class="icon_text">Mitt konto</span>
+					</a>
+				</div>
+				<div id="homebutton_center">
+					<div id="homebutton"></div>
+				</div>
+			</footer>
+		</div>
+	</div>
 </body>
 </html>
 

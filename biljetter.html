@@ -6,68 +6,76 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
     <link rel = "stylesheet" href = "stylesheets/style.css">
-    <link rel = "stylesheet" href = "stylesheets/AktivTicketStyle.css">
+    <link rel = "stylesheet" href = "stylesheets/AktivTicketStyle.css"> 
 </head>
-<body class="background">
-	<div class = "page_wrap">
-		<header>
-			<h1>
-				Biljetter
-			</h1>
-		</header>
-		<div class="container">
-			<div class ="rectangle">
+<body>
+	<div class="site-container">
+		<div id="iphoneborder"></div>
+		<div class="display">	
+			<header class="center">
+				<span class="header-text">Biljetter</span>
+			</header>
+
+			<div class="main-container col-center">
+				<div id="main" class="col-center">
+					<a class="container" href="unused-Tickets.html">
+							<div class ="rectangle space_between">
+								<div>	
+									<img src="images/biljettIkon.png" height="45px" width="45px">
+									<a> x <a id="nrTickets">  </a> </a>
+								</div>
+								
+								<div style="font-size: 16px;"> Oanvända Biljetter </div>
+								<img src="images\arrow-forward.png" height="30px" width="23px"> 
+						</div>
+					</a>
 				
-					<img src="images/biljettIkon.png" height="50px" width="50px">
-					x <a id="nrTickets">  </a>
-					Oanvända Biljetter
+					 	<div class="active-ticket-container">
+							<img class="active-ticket" src="images/biljett.png">		
+							<div class="ticket-zone">Zon ABC</div>
+							<div class="ticket-type">
+								<div class="numberOfTicketsBox">
+									<div class="numberOfTicketsBoxText">
+										1
+									</div>
+								</div>
+								<div class="numberOfTicketsType">
+									Ungdom
+								</div>
+							</div>
+						</div>
+					</main>
+					<br>
+				</div>
+
 				
-			</div>
-		</div>
-	</div>
-	
-	<main class="main-center">
-		<div class="wrapper">
-			<div class="numberOfTicketsBox">
-				<div class="numberOfTicketsBoxText">
-					1
+					<footer>
+						<div id="icontray">
+							<a class="icon_box" id="icon1" href="biljetter.html">
+								<div class="icon_image"></div>
+								<span class="icon_text">Biljetter</span>
+							</a>
+							<a class="icon_box blue" id = "icon2" href = "index.html">
+								<div class="icon_image"></div>
+								<span class="icon_text">Köp biljett</span>
+							</a>
+							<a class="icon_box" id = "icon3">
+								<div class="icon_image"></div>
+								<span class="icon_text">Reseplanering</span>
+							</a>
+							<a class="icon_box" id = "icon4">
+								<div class="icon_image"></div>
+								<span class="icon_text">Mitt konto</span>
+							</a>
+						</div>
+						<div id="homebutton_center">
+							<div id="homebutton"></div>
+						</div>
+					</footer>
 				</div>
 			</div>
-			<div class="numberOfTicketsType">
-				Ungdom
-			</div>
+			<script src = "script/unusedTickets.js" ></script>
 		</div>
-
-		<br><br><br>
-		
-		<div class="active-ticket-container">
-			<img class="active-ticket" src="images/biljett.png">		
-			<div class="ticket-zone">Zon ABC</div>
-			<div class="ticket-type">2 ungdom</div>
-		</div>
-	</main>
-
-	<footer>
-		<div id="icontray">
-			<a class="icon_box" id = "icon1" href = "biljetter.html">
-				<div class="icon_image"></div>
-				Biljetter
-			</a>
-			<a class="icon_box" id = "icon2" href = "index.html">
-				<div class="icon_image"></div>
-				Köp biljett
-			</a>
-			<a class="icon_box" id = "icon3">
-				<div class="icon_image"></div>
-				Reseplanering
-			</a>
-			<a class="icon_box" id = "icon4">
-				<div class="icon_image"></div>
-				Mitt konto
-			</a>
-		</div>
-	</footer>
-	<script> type = "text/javascript", src = "script/unusedTickets.js" </script>
-
+	</div>		
 </body>
 </html>
