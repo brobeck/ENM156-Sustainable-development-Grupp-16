@@ -7,37 +7,40 @@
   <title>Inga aktiva biljetter</title>
   <link rel="stylesheet" href="stylesheets/no-active-ticket.css">
   <link rel = "stylesheet" href = "stylesheets/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 
-<!--Headern syns inte?-->
 <body>
   <div class="site-container">
+    <div id="iphoneborder"></div>
 		<div class="display"> <!--Centrerar allt till iphone-format typ-->
-      <div class = "page_wrap">
-        <header>
-          <h1>
-            Biljetter
-          </h1>
-        </header>
-        
-        <!--Knapp med länk till unused-tickets-->
-        <div class="container">
-          <a href="unused-tickets.html">
-            <div class ="rectangle_no">
-              <img src="images/biljettIkon.png" height="50px" width="50px">
-              <!--x <a id="nrTickets">  </a>-->
-              <div class="text_btn">Oanvända Biljetter</div>
-              
-            </div>
-          </a>
-        </div>
+      
+      <header class="center">
+        <span class="header-text">Biljetter</span>
+      </header>
+      
+      <!--Knapp med länk till unused-tickets-->
+      <div class="main-container col-center">
+        <div id="main" class="col-center">
+          <div class="container">
+            <a href="unused-tickets.html">
+              <div class ="rectangle space_between">
+                <img src="images/biljettIkon.png" height="50px" width="50px">
+                <a> x <a id="nrTickets"> </a> </a>
+                <div style="font-size: 16px;"> Oanvända Biljetter </div>
+                <img src="images\arrow-forward.png" height="30px" width="23px">
+                
+              </div>
+            </a>      
+          </div> <!--container-->
 
-        <div class="text">
-          Du har inga aktiva biljetter
-        </div>
+          <div class="testtext">
+            Du har inga aktiva biljetter
+          </div>
         
-
+        </div> <!--main-->
         <footer>
           <div id="icontray">
             <a class="icon_box" id = "icon1" href = "biljetter.html">
@@ -58,10 +61,11 @@
             </a>
           </div>
         </footer>
-
-      </div>
-    </div>
-  </div>
+      
+      </div><!--main-container col-center-->
+      <script src = "script/unusedTickets.js" ></script>
+    </div><!--display-->
+  </div> <!--site container-->
 </body>
 
 </html>
