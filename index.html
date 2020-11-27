@@ -13,8 +13,9 @@
 </head>
 <body>
 	<div class="site-container">
-		<div id="iphoneborder"></div>
+
 		<div class="display">
+			<div id="iphoneborder"></div>
 			<header class="center">
 				<span class="header-text">Köp biljett</span>
 			</header>
@@ -23,13 +24,60 @@
 				<div id="main"></div>
 			</div>
 
+			<template id="buyPunch">
+				<div class = "container">
+					<div class = "container_row">
+						<div class = "rectangle thin white space_between">
+							<div class = "rect_left">
+								<img src = "images/biljettIkon.png" style="height:100%;">
+								Välj område
+							</div>
+							<img src = "images/arrow-forward.png" style="padding:10px;">
+						</div>
+					</div>
+					<div class = "container_row">
+						<a>Läs mer om våra zooner</a>
+					</div>
+				
+					<div class = "container_row cr_small_margin">
+						<h3>Resenärstyp</h3>
+						<small>Resa med barn</small>
+					</div>
+					<div class = "container_row">
+						<div class = "rectangle thin white">
+							<input type="radio" id="adult" name="type" value="adult">
+							<label for="adult">Vuxen</label>
+							<input type="radio" id="young" name="type" value="young">
+							<label for="young">Ungdom</label>
+						</div>
+					</div>
+				
+					<div class = "container_row cr_small_margin">
+						<h3>Antal dagar</h3>
+					</div>
+					<div class = "container_row">
+						<div class = "rectangle thin white">
+							<input type="radio" id="nr5" name="number" value="nr5">
+							<label for="adult">5 biljetter</label><br>
+							<input type="radio" id="nr10" name="number" value="nr10">
+							<label for="young">10 biljetter</label><br>
+						</div>
+					</div>
+					<div class = "container_row">
+						<div class="rectangle lightgray">
+							<h3>Betala</h3>
+						</div> 
+					</div>
+				</div>
+			</template>
+
 			<footer>
 				<div id="icontray">
 					<a class="icon_box" id = "icon1" href = "biljetter.html">
 						<div class="icon_image"></div>
 						<span class="icon_text">Biljetter</span>
 					</a>
-					<a class="icon_box blue" id = "icon2" href = "index.html">
+					<a class="icon_box active" id = "icon2" href = "index.html">
 						<div class="icon_image"></div>
 						<span class="icon_text">Köp biljett</span>
 					</a>

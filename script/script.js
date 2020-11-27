@@ -1,7 +1,7 @@
 window.onload = initScripts;
 
 function initScripts() {
-    drawTicketButtons();
+    //drawTicketButtons();
 }
 
 function myScript() {

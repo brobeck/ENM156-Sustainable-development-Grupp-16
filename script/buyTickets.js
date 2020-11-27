@@ -1,6 +1,10 @@
 
+$(function() {
+    drawTicketButtons();
+});
+
 function drawTicketButtons() {
-    var page = document.getElementById("main");
+    /*var page = document.getElementById("main");
 
     var container = document.createElement("div");
     container.className = "container";
@@ -27,12 +31,35 @@ function drawTicketButtons() {
     
     container.appendChild(containerRow);
     container.appendChild(containerRow2);
-    page.appendChild(container);
+    page.appendChild(container);*/
+    $("#main").empty();
+    $("#main").append($(`
+        <div class="container">
+            <div class="container_row">
+		        <div id="singleRect" class="rectangle">
+			        Enkelbiljett
+		        </div>
+		        <div id="periodRect" class="rectangle">
+			        Periodbiljett
+		        </div>
+	        </div>
+	        <div class="container_row">			
+    	        <div id="dayRect" class="rectangle">
+			        Dygnsbiljett
+		        </div>
+		        <div id="punchRect" class="rectangle">
+			        Klippkort
+                </div>
+            </div>
+        </div>    
+    `));
 
     document.getElementById("punchRect").addEventListener("click", drawBuyPunchticket);
 }
 
 function drawBuyPunchticket() {
+    //lägg till rexexp för att funka på github pages
     $("#main").empty();
-    $("#main").load("../buypunch.html");
+    $("#main").append($("#buyPunch").html());
+    console.log($("#buyPunch").html());
 }
