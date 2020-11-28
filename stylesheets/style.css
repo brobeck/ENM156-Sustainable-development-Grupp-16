@@ -1,60 +1,60 @@
-
-*{
-    margin: 0;
+* {
+  margin: 0;
 }
 
-html, body{
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
-body{
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    background: url(../images/background_tram_more_blur.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+body {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  background: url(../images/background_tram_more_blur.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .row-center {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 .col-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn-hover:hover {
-    cursor: pointer;
-    background-color: #eaeaea;
+  cursor: pointer;
+  background-color: #eaeaea;
 }
 
-header{
-    width: 100%;
-    height: 162px;
-    background: url(../images/header.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: white;
+header {
+  width: 100%;
+  height: 162px;
+  background: url(../images/header.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
 }
 
 .header-text {
-    font-size: 22px;
+  font-size: 22px;
 }
 
 .display {
-    width: 378px;
-    height: 812px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
+  width: 378px;
+  height: 812px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 /* when positioned outside display
@@ -71,415 +71,418 @@ header{
 }*/
 
 #iphoneborder {
-    background: url(../images/iphoneborder.png);
-    z-index: 999;
-    width: 433px;
-    height: 860px;
-    position: absolute;
-    background-position: center;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    pointer-events: none;
-    top: -25px;
-    left: -29px;
+  background: url(../images/iphoneborder.png);
+  z-index: 999;
+  width: 433px;
+  height: 860px;
+  position: absolute;
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  top: -25px;
+  left: -29px;
 }
 
 /*Köp biljett*/
 #singleRect .buyTicketIcon {
-    background: url(../images/singleTicketIcon.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 50px;
-    width: 100%;
-    margin-bottom: 5px;
+  background: url(../images/singleTicketIcon.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 100%;
+  margin-bottom: 5px;
 }
 
 #periodRect .buyTicketIcon {
-    background: url(../images/periodTicketIcon.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 50px;
-    width: 100%;
-    margin-bottom: 5px;
+  background: url(../images/periodTicketIcon.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 100%;
+  margin-bottom: 5px;
 }
 
 #dayRect .buyTicketIcon {
-    background: url(../images/dayTicketIcon.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 50px;
-    width: 100%;
-    margin-bottom: 5px;
+  background: url(../images/dayTicketIcon.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 100%;
+  margin-bottom: 5px;
 }
 
 #punchRect .buyTicketIcon {
-    background: url(../images/punchTicketIcon.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 50px;
-    width: 100%;
-    margin-bottom: 5px;
+  background: url(../images/punchTicketIcon.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 100%;
+  margin-bottom: 5px;
 }
 
 /* rectangle */
-.site-container{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* gömmer iphoneram när fönstret inte är tillräckligt högt*/
-    overflow: hidden;
+.site-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* gömmer iphoneram när fönstret inte är tillräckligt högt*/
+  overflow: hidden;
 }
 
 .unused-tickets-btn {
-    color: inherit;
-    text-decoration: none;
-    width: 320px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    box-sizing: border-box;
+  color: inherit;
+  text-decoration: none;
+  width: 320px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
 }
 
-.container{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 0 30px;
-    box-sizing: border-box;
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 30px;
+  box-sizing: border-box;
 }
 
-.container_row{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
+.container_row {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 .container_row.large_margin {
-    margin-bottom: px;
+  margin-bottom: px;
 }
 
 .container_row.cr_small_margin {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
-.container_row:last-child{
-    margin-bottom: 0;
+.container_row:last-child {
+  margin-bottom: 0;
 }
 
 .rectangle {
-    height: 80px;
-    width: 100%;
-    background-color: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 15px;
-    box-sizing: border-box;
-    padding: 10px;
+  height: 80px;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  box-sizing: border-box;
+  padding: 10px;
 }
 
 .rectangle:not(:first-child) {
-    margin-left: 7px;
+  margin-left: 7px;
 }
 
 .rectangle:not(:last-child) {
-    margin-right: 7px;
+  margin-right: 7px;
 }
 
 .rectangle.space_between {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
 }
 
 .rectangle.align_center {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .rectangle.space_between .rect_left {
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
 }
 
 .column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .rectangle.space_between .rect_right {
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
 }
 
 .rectangle.thin {
-    height: 60px;
-    border-radius: 10px;
+  height: 60px;
+  border-radius: 10px;
 }
 
 .rectangle.lightgray {
-    background: #E5E5E5;
+  background: #e5e5e5;
 }
 
 .rectangle.lightblue {
-    background: #cef3ff;
+  background: #cef3ff;
 }
 
 .nr-tickets-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .nr-tickets {
-    display: flex;
-    align-items: flex-end;
+  display: flex;
+  align-items: flex-end;
 }
 .nr-tickets-icon {
-    width: 45px;
-    height: 45px;
+  width: 45px;
+  height: 45px;
 }
 .nr-tickets-count {
-    font-size: 15px;
-    color: #808080;
+  font-size: 15px;
+  color: #808080;
 }
 .nr-tickets-text {
-    font-size: 18px;
-    font-weight: 400;
+  font-size: 18px;
+  font-weight: 400;
 }
 .nr-tickets-arrow {
-    width: 18px;
-    height: auto;
+  width: 18px;
+  height: auto;
 }
 
 footer {
-    width: 100%;
-    margin-top: auto;
-    height: 83px; 
-    background: white;
-    border-top: solid;
-    border-top-color: #E5E5E5;
-    border-top-width: 1px;
+  width: 100%;
+  margin-top: auto;
+  height: 83px;
+  background: white;
+  border-top: solid;
+  border-top-color: #e5e5e5;
+  border-top-width: 1px;
 }
 
-#icontray{
-    height: 75%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    box-sizing: border-box;
-    padding-top: 5px;
+#icontray {
+  height: 75%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  box-sizing: border-box;
+  padding-top: 5px;
 }
 
 #homebutton_center {
-    height: 25%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #homebutton {
-    background: black;
-    height: 5px;
-    border-radius: 10px;
-    width: 134px;
+  background: black;
+  height: 5px;
+  border-radius: 10px;
+  width: 134px;
 }
 
-.icon_box{
-    display: block;
-    text-decoration: none;
-    width: 20%;
-    text-align: center;
-    color: #999;
-    font-size: smaller;
+.icon_box {
+  display: block;
+  text-decoration: none;
+  width: 20%;
+  text-align: center;
+  color: #999;
+  font-size: smaller;
 }
 
-.icon_image{
-    height: 45%;
-    margin: 1px 0;
+.icon_image {
+  height: 45%;
+  margin: 1px 0;
 }
 
 .icon_text {
-    font-size: 11px;
+  font-size: 11px;
 }
 
 .icon_box.active {
-    color:#00AAEB;
+  color: #00aaeb;
 }
 
 .icon_box:hover {
-    color:#00AAEB;
+  color: #00aaeb;
 }
 
-#icon1:hover .icon_image{
-    background: url(../images/biljetter-blue.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+#icon1:hover .icon_image {
+  background: url(../images/biljetter-blue.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-#icon2:hover .icon_image{
-    background: url(../images/buy-ticket.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+#icon2:hover .icon_image {
+  background: url(../images/buy-ticket.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-#icon1 .icon_image{
-    background: url(../images/ticket-icon.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+#icon1 .icon_image {
+  background: url(../images/ticket-icon.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-#icon1.active .icon_image{
-    background: url(../images/biljetter-blue.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+#icon1.active .icon_image {
+  background: url(../images/biljetter-blue.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-#icon2 .icon_image{
-    background: url(../images/buy-ticket-grey.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+#icon2 .icon_image {
+  background: url(../images/buy-ticket-grey.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-#icon2.active .icon_image{
-    background: url(../images/buy-ticket.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+#icon2.active .icon_image {
+  background: url(../images/buy-ticket.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-#icon3 .icon_image{
-    background: url(../images/reseplanering-grey.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+#icon3 .icon_image {
+  background: url(../images/reseplanering-grey.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-#icon4 .icon_image{
-    background: url(../images/mittkonto-grey.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-
-.scrollable {
-    width: 100%;
-    height: 100%;
-    /* overflow: scroll; */
+#icon4 .icon_image {
+  background: url(../images/mittkonto-grey.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 #ticket-container {
-    padding: 0px 20px;
+  padding: 0px 20px;
+  width: 100%;
+  height: 566px;
+  overflow: scroll;
+  padding-bottom: 20px;
 }
 
 .unused-ticket {
-    margin-top: 15px;
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #cef3ff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  box-sizing: border-box;
+  padding: 10px;
 }
 
 .unused-ticket-type {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .unused-zone {
-    font-size: 24px;
-    font-weight: bold;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .activate-btn {
-    width: 130px;
-    height: 70px;
-    background-color: white;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 
-        -4px -4px 4px 0 rgba(215, 245, 255, 1),
-        4px 4px 4px 0 rgba(0, 0, 0, 0.15);
-    font-size: 20px;
+  width: 130px;
+  height: 70px;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -4px -4px 4px 0 rgba(215, 245, 255, 1),
+    4px 4px 4px 0 rgba(0, 0, 0, 0.15);
+  font-size: 21px;
 }
 
 .activate-btn:hover {
-    background-color: #eeeeee;
-    cursor: pointer;
+  background-color: #eeeeee;
+  cursor: pointer;
 }
 
 .main-container {
-    background: #f3fcff;
-    position: relative;
-    flex: 1;
+  background: #f3fcff;
+  position: relative;
+  flex: 1;
 }
 
 #main {
-    position: absolute;
-    top: -40px;
-    width: 100%;
-    /* height: calc(100% + 40px); */
+  position: absolute;
+  top: -40px;
+  width: 100%;
+  /* height: calc(100% + 40px); */
 }
 
 .main-center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .background {
-    background-color: #F3FCFF;
+  background-color: #f3fcff;
 }
 
 .active-ticket-container {
-    width: 320px;
-    position: relative;
-    top: 10px;
+  width: 320px;
+  position: relative;
+  top: 10px;
 }
 
 .active-ticket {
-    height: 508px;
-    filter: drop-shadow( 0px 4px 10px rgba(0, 0, 0, .15));
+  height: 508px;
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.15));
 }
 
 .ticket-zone {
-    position: absolute;
-    top: 50px;
-    left: 20px;
-    font-weight: 900;
-    font-size: 21px;
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  font-weight: 900;
+  font-size: 21px;
 }
 
 .ticket-type {
-    position: absolute;
-    top: 100px;
-    right: 15px;
-    display: flex;
-    align-items: center;
+  position: absolute;
+  top: 100px;
+  right: 15px;
+  display: flex;
+  align-items: center;
 }
