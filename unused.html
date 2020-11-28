@@ -1,16 +1,19 @@
 <!doctype HTML>
 <html>
+
 <head>
-	<meta charset= "utf-8">
-	<meta name =  "viewport" content = "width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
-	<link rel = "stylesheet" href = "stylesheets/style.css">
-	<link rel = "stylesheet" href = "stylesheets/KopKlippkortStyle.css">
-	<link rel = "stylesheet" href = "stylesheets/AktivTicketStyle.css"> 
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="stylesheets/style.css">
+	<link rel="stylesheet" href="stylesheets/KopKlippkortStyle.css">
+	<link rel="stylesheet" href="stylesheets/AktivTicketStyle.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src = "script/script.js" defer></script>
+	<script defer src="script/script.js"></script>
+	<script defer src="script/unusedTickets.js"></script>
 </head>
+
 <body>
 	<div class="site-container">
 
@@ -21,47 +24,28 @@
 			</header>
 
 			<div class="main-container">
-				<div id="main">
-					<div class="container">
-						<div class="container_row">
-							<div class="rectangle lightblue space_between">
-								<div class="rect_left">
-										<div class="numberOfTicketsBox">
-											<div class="numberOfTicketsBoxText">
-												1
-											</div>
-										</div>
-										<div class="numberOfTicketsType">
-											Ungdom
-										</div>
-								</div>
-								<div class="rect_center column"></div>
-								<div class="rect_right">
-									<div class="rectangle thin white">
-										Aktivera
-									</div>
-								</div>
-							</div>
-						</div>
+				<div class="scrollable">
+					<div id="ticket-container" class="container">
+						<!-- populated by JS -->
 					</div>
 				</div>
 			</div>
 
 			<footer>
 				<div id="icontray">
-					<a class="icon_box active" id = "icon1" href = "biljetter.html">
+					<a class="icon_box active" id="icon1" href="biljetter.html">
 						<div class="icon_image"></div>
 						<span class="icon_text">Biljetter</span>
 					</a>
-					<a class="icon_box" id = "icon2" href = "index.html">
+					<a class="icon_box" id="icon2" href="index.html">
 						<div class="icon_image"></div>
 						<span class="icon_text">Köp biljett</span>
 					</a>
-					<a class="icon_box" id = "icon3">
+					<a class="icon_box" id="icon3">
 						<div class="icon_image"></div>
 						<span class="icon_text">Reseplanering</span>
 					</a>
-					<a class="icon_box" id = "icon4">
+					<a class="icon_box" id="icon4">
 						<div class="icon_image"></div>
 						<span class="icon_text">Mitt konto</span>
 					</a>
@@ -73,4 +57,5 @@
 		</div>
 	</div>
 </body>
+
 </html>
