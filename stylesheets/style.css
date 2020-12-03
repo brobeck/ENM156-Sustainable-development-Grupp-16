@@ -32,7 +32,7 @@ body {
 
 .btn-hover:hover {
   cursor: pointer;
-  background-color: #eaeaea;
+  background-color: #eeeeee;
 }
 
 header {
@@ -123,6 +123,30 @@ header {
   height: 50px;
   width: 100%;
   margin-bottom: 5px;
+}
+
+#punchRect:hover {
+  cursor: pointer;
+  background-color: #eeeeee;
+}
+
+#zonebutton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#zonebutton:hover {
+  cursor: pointer;
+  background-color: #eeeeee;
+}
+
+.select-zone-icon {
+  width: 40px;
+  height: auto;
+}
+.select-zone-text {
+  margin-left: 10px;
+  font-weight: bold;
 }
 
 /* rectangle */
@@ -236,12 +260,25 @@ header {
   border-radius: 10px;
 }
 
+.rectangle.extrathin {
+  height: 50px;
+  border-radius: 5px;
+}
+
 .rectangle.lightgray {
   background: #e5e5e5;
 }
 
 .rectangle.lightblue {
   background: #cef3ff;
+}
+
+#buybutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
 }
 
 .nr-tickets-container {
@@ -389,8 +426,29 @@ footer {
   padding: 0px 20px;
   width: 100%;
   height: 566px;
-  overflow: scroll;
   padding-bottom: 20px;
+}
+
+#ticket-container.scroll {
+  overflow-y: scroll;
+}
+#ticket-container.scroll::-webkit-scrollbar {
+  width: 7px;
+  height: 0;
+}
+#ticket-container.scroll::-webkit-scrollbar-track {
+  margin: 5px 0;
+}
+#ticket-container.scroll::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  box-shadow: rgba(255, 255, 255, 0.3) 0 0 0 1px;
+}
+#ticket-container.scroll:hover::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.45);
+}
+#ticket-container.scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.55);
 }
 
 .unused-ticket {

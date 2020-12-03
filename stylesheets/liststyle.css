@@ -1,0 +1,41 @@
+.toplist {
+  overflow-y: auto;
+}
+
+.toplist {
+  margin-top: 40px;
+  width: 100%;
+  height: 566px;
+}
+
+.rowlist {
+  height: 60px;
+  background: white;
+  border-bottom: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  padding: 10px 15px;
+}
+
+.rowlist:first-child {
+  border-top: 1px solid #e5e5e5;
+}
+
+.rowlist_left {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.rowlist_left * {
+  margin-right: 10px;
+}
+
+.rowlist_left img {
+  height: 100%;
+}
+
+.rowlist_left span {
+  font-weight: bold;
+  font-size: larger;
+}

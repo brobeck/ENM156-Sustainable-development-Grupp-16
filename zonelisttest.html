@@ -12,20 +12,13 @@
     <link rel="stylesheet" href="stylesheets/liststyle.css" />
     <link rel="stylesheet" href="stylesheets/KopKlippkortStyle.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="script/buyTickets.js" defer></script>
-    <script src="script/script.js" defer></script>
   </head>
   <body>
     <div class="site-container">
       <div class="display">
         <div id="iphoneborder"></div>
         <header class="center">
-          <span class="header-text">Köp biljett</span>
+          <span class="header-text">Välj zon</span>
         </header>
 
         <div class="main-container">
@@ -35,15 +28,12 @@
         <template id="buyPunch">
           <div class="container">
             <div class="container_row">
-              <div
-                id="zonebutton"
-                class="rectangle extrathin white space_between"
-              >
+              <div class="rectangle thin white space_between">
                 <div class="rect_left">
-                  <img class="select-zone-icon" src="images/biljettIkon.png" />
-                  <span class="select-zone-text">Välj område</span>
+                  <img src="images/biljettIkon.png" style="height: 100%" />
+                  Välj område
                 </div>
-                <img class="nr-tickets-arrow" src="images\arrow-forward.png" />
+                <img src="images/arrow-forward.png" style="padding: 10px" />
               </div>
             </div>
             <div class="container_row">
@@ -75,8 +65,8 @@
               </div>
             </div>
             <div class="container_row">
-              <div id="buybutton" class="rectangle lightgray thin">
-                <h3>Till betalning</h3>
+              <div id="buybutton" class="rectangle lightgray">
+                <h3>Betala</h3>
               </div>
             </div>
           </div>

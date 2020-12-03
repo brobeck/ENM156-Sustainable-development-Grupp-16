@@ -1,6 +1,4 @@
-const nrTickets = 13
-const ticketType = 'Ungdom'
-const zone = 'A'
+const ticketContainer = document.querySelector('#ticket-container')
 
 const unusedTickets = {
   youth: {
@@ -12,35 +10,39 @@ const unusedTickets = {
     c: 0,
   },
   adult: {
-    a: 0,
+    a: 2,
     ab: 0,
-    abc: 0,
-    b: 0,
-    bc: 0,
+    abc: 11,
+    b: 1,
+    bc: 9,
     c: 0,
   },
 }
 
-const ticket = (quantity, type, zone) => `
+const createTicket = ({ quantity, type, zone }) => `
   <div class="unused-ticket">
     <div class="unused-ticket-type">
       <div class="numberOfTicketsBox">
         <div class="numberOfTicketsBoxText">${quantity}</div>
       </div>
-      <span class="numberOfTicketsType">${type}</span>
+      <span class="numberOfTicketsType">${
+        type === 'youth' ? 'Ungdom' : 'Vuxen'
+      }</span>
     </div>
     <div class="unused-zone rect_center column">
       <span>Zon</span>
-      <span>${zone}</span>
+      <span>${zone.toUpperCase()}</span>
     </div>
       <div class="activate-btn">Aktivera</div>
   </div>`
 
-const tickets = Object.entries(unusedTickets.youth).map(([zone, quantity]) => {
-  return ticket(quantity, 'Ungdom', zone)
-})
-console.log(tickets)
+const tickets = Object.entries(unusedTickets)
+  .map(([type, zones]) =>
+    Object.entries(zones)
+      .filter(([_, quantity]) => quantity !== 0)
+      .map(([zone, quantity]) => ({ quantity, type, zone }))
+  )
+  .flat()
+  .sort((a, b) => a.zone.localeCompare(b.zone))
 
-const ticketContainer = document.querySelector('#ticket-container')
-
-tickets.forEach((ticket) => (ticketContainer.innerHTML += ticket))
+tickets.forEach((ticket) => (ticketContainer.innerHTML += createTicket(ticket)))
