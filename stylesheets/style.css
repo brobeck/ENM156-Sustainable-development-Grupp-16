@@ -1,3 +1,10 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@font-face {
+  font-family: 'nerminFont';
+  src: url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+} */
+
 * {
   margin: 0;
 }
@@ -8,7 +15,7 @@ body {
 }
 
 body {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
   background: url(../images/background_tram_more_blur.jpg);
   background-position: center;
   background-size: cover;
@@ -146,7 +153,28 @@ header {
 }
 .select-zone-text {
   margin-left: 10px;
+}
+.zone-selected {
   font-weight: bold;
+}
+
+.zone-readmore-text {
+  color: #459ad5;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.question-mark-container {
+  display: flex;
+  align-items: center;
+}
+.question-mark-text {
+  font-size: 10.5px;
+  margin-right: 5px;
+}
+.question-mark-icon {
+  width: 25px;
+  cursor: pointer;
 }
 
 /* rectangle */
@@ -241,6 +269,50 @@ header {
   align-items: center;
 }
 
+.slider {
+  padding: 6px;
+  cursor: pointer;
+}
+
+.valid_buy {
+  background: rgb(72, 190, 134);
+  cursor: pointer;
+}
+
+/*blue rectangle select buttons*/
+
+.blue_select {
+  position: relative;
+  height: 100%;
+  background: #00aaeb;
+  width: 50%;
+  left: 0;
+  border-radius: 5px;
+  box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+.outer_select {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: -38px;
+  height: 100%;
+  width: 100%;
+}
+
+.left_select,
+.right_select {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 200;
+}
+
+.subtext {
+  font-size: 9px;
+}
+
 .column {
   display: flex;
   flex-direction: column;
@@ -262,7 +334,7 @@ header {
 
 .rectangle.extrathin {
   height: 50px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .rectangle.lightgray {
@@ -273,12 +345,21 @@ header {
   background: #cef3ff;
 }
 
+.legend {
+  font-size: 18px;
+}
+
 #buybutton {
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  font-weight: bold;
+}
+.buygray {
+  background: #cccccc;
+}
+.buy-text {
+  font-size: 17px;
 }
 
 .nr-tickets-container {
@@ -288,13 +369,14 @@ header {
 }
 .nr-tickets {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 .nr-tickets-icon {
   width: 45px;
   height: 45px;
 }
 .nr-tickets-count {
+  margin-left: 5px;
   font-size: 15px;
   color: #808080;
 }
@@ -477,6 +559,8 @@ footer {
 }
 
 .activate-btn {
+  color: inherit;
+  text-decoration: none;
   width: 130px;
   height: 70px;
   background-color: white;

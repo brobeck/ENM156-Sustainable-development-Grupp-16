@@ -37,29 +37,69 @@ function drawTicketButtons() {
 }
 
 var chosenZone = ''
+var adultActive = true
+var fiveActive = true
 
 function drawBuyPunchticket() {
   $('#main').empty()
   $('#main').append($('#buyPunch').html())
   $('#zonebutton').click(drawZoneList)
+  $('#age_select').click(function () {
+    adultActive = !adultActive
+    checkAgeNumber()
+  })
+  $('#number_select').click(function () {
+    fiveActive = !fiveActive
+    checkAgeNumber()
+  })
   checkZone()
+  checkAgeNumber()
+  //fixa bug med animering när man byter sida
 }
 
 function checkZone() {
   if (/^(?!ac)[abc]+b?c?$/g.test(chosenZone)) {
-    document.getElementsByClassName(
-      'select-zone-text'
-    )[0].innerHTML = `Zon ${chosenZone.toUpperCase()}`
+    const zoneText = document.querySelector('.select-zone-text')
+    zoneText.innerHTML = `Zon ${chosenZone.toUpperCase()}`
+    zoneText.classList.add('zone-selected')
+
     $('#buybutton').animate({ backgroundColor: '#48be86' })
+    $('#buybutton').addClass('valid_buy')
     $('#buybutton').click(buyPunch)
   }
 }
 
+function checkAgeNumber() {
+  var animationTime = 80
+  if (adultActive) {
+    $('#age_select .blue_select').animate({ left: '0px' }, animationTime)
+    $('#age_select .left_select').css('color', 'white')
+    $('#age_select .right_select').css('color', 'black')
+  } else {
+    $('#age_select .blue_select').animate({ left: '149px' }, animationTime)
+    $('#age_select .left_select').css('color', 'black')
+    $('#age_select .right_select').css('color', 'white')
+  }
+
+  if (fiveActive) {
+    $('#number_select .blue_select').animate({ left: '0px' }, animationTime)
+    $('#number_select .left_select').css('color', 'white')
+    $('#number_select .right_select').css('color', 'black')
+  } else {
+    $('#number_select .blue_select').animate({ left: '149px' }, animationTime)
+    $('#number_select .left_select').css('color', 'black')
+    $('#number_select .right_select').css('color', 'white')
+  }
+}
+
 function buyPunch() {
-  console.log(chosenZone)
-  var ticketZone = 'a'
-  var ticketType = 'youth'
-  var ticketNumber = 10
+  var ticketZone = chosenZone
+  var ticketType = adultActive ? 'adult' : 'youth'
+  var ticketNumber = fiveActive ? 5 : 10
+
+  console.log(`
+  ticket with zone ${ticketZone}, type ${ticketType}, number ${ticketNumber} bought
+  `)
 
   pushUnusedTicket(ticketType, ticketZone, ticketNumber)
 }

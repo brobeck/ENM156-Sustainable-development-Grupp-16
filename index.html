@@ -16,6 +16,11 @@
       rel="stylesheet"
       href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="script/buyTickets.js" defer></script>
     <script src="script/script.js" defer></script>
@@ -40,43 +45,65 @@
                 class="rectangle extrathin white space_between"
               >
                 <div class="rect_left">
-                  <img class="select-zone-icon" src="images/biljettIkon.png" />
+                  <img
+                    class="select-zone-icon"
+                    src="images/punchTicketIcon.png"
+                  />
                   <span class="select-zone-text">Välj område</span>
                 </div>
                 <img class="nr-tickets-arrow" src="images\arrow-forward.png" />
               </div>
             </div>
             <div class="container_row">
-              <a>Läs mer om våra zooner</a>
+              <a class="zone-readmore-text">Läs mer om våra zoner</a>
             </div>
 
             <div class="container_row cr_small_margin">
-              <h3>Resenärstyp</h3>
-              <small>Resa med barn</small>
+              <span class="legend">Resenärstyp</span>
+              <div class="question-mark-container">
+                <span class="question-mark-text">Resa med barn och ungdom</span>
+                <img
+                  class="question-mark-icon"
+                  src="images/question-mark.png"
+                />
+              </div>
             </div>
             <div class="container_row">
-              <div class="rectangle thin white">
-                <input type="radio" id="adult" name="type" value="adult" />
-                <label for="adult">Vuxen</label>
-                <input type="radio" id="young" name="type" value="young" />
-                <label for="young">Ungdom</label>
+              <div id="age_select" class="rectangle slider extrathin white">
+                <div class="blue_select"></div>
+                <div class="outer_select">
+                  <div class="left_select">
+                    <span>Vuxen</span>
+                  </div>
+                  <div class="right_select">
+                    <div class="column">
+                      <span>Ungdom</span>
+                      <span class="subtext">(7-19 år)</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
             <div class="container_row cr_small_margin">
-              <h3>Antal dagar</h3>
+              <span class="legend">Antal dagar</span>
             </div>
             <div class="container_row">
-              <div class="rectangle thin white">
-                <input type="radio" id="nr5" name="number" value="nr5" />
-                <label for="adult">5 biljetter</label><br />
-                <input type="radio" id="nr10" name="number" value="nr10" />
-                <label for="young">10 biljetter</label><br />
+              <div id="number_select" class="rectangle slider extrathin white">
+                <div class="blue_select"></div>
+                <div class="outer_select">
+                  <div class="left_select">
+                    <span>5 dagar</span>
+                  </div>
+                  <div class="right_select">
+                    <span>10 dagar</span>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="container_row">
-              <div id="buybutton" class="rectangle lightgray thin">
-                <h3>Till betalning</h3>
+              <div id="buybutton" class="rectangle buygray thin">
+                <span class="buy-text">Till betalning</span>
               </div>
             </div>
           </div>

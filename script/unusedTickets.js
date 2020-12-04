@@ -1,6 +1,6 @@
 const ticketContainer = document.querySelector('#ticket-container')
 
-const unusedTickets = {
+/*const unusedTickets = {
   youth: {
     a: 1,
     ab: 13,
@@ -17,7 +17,11 @@ const unusedTickets = {
     bc: 9,
     c: 0,
   },
-}
+}*/
+
+console.log(sessionStorage)
+
+const unusedTickets = JSON.parse(sessionStorage.getItem('unusedTickets'))
 
 const createTicket = ({ quantity, type, zone }) => `
   <div class="unused-ticket">
@@ -33,7 +37,7 @@ const createTicket = ({ quantity, type, zone }) => `
       <span>Zon</span>
       <span>${zone.toUpperCase()}</span>
     </div>
-      <div class="activate-btn">Aktivera</div>
+      <a href="biljetter.html" class="activate-btn">Aktivera</a>
   </div>`
 
 const tickets = Object.entries(unusedTickets)
