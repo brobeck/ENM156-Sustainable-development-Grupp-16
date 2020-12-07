@@ -4,6 +4,7 @@ $(function () {
 
 function drawTicketButtons() {
   $('#main').empty()
+  $('#back_button').hide()
   $('#main').append(
     $(`
         <div class="container">
@@ -42,6 +43,10 @@ var fiveActive = true
 
 function drawBuyPunchticket() {
   $('#main').empty()
+  $('#back_button').show()
+  $('#back_button').click(function () {
+    drawTicketButtons()
+  })
   $('#main').append($('#buyPunch').html())
   $('#zonebutton').click(drawZoneList)
   $('#age_select').click(function () {
@@ -102,10 +107,16 @@ function buyPunch() {
   `)
 
   pushUnusedTicket(ticketType, ticketZone, ticketNumber)
+
+  window.location.replace('unused.html')
 }
 
 function drawZoneList() {
   $('#main').empty()
+  $('#back_button').show()
+  $('#back_button').click(function () {
+    drawBuyPunchticket()
+  })
   $('#main').append(
     $(`
             <div class="toplist">

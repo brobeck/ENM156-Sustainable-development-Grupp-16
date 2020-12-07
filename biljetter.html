@@ -8,6 +8,17 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="stylesheets/style.css">
 	<link rel="stylesheet" href="stylesheets/AktivTicketStyle.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link
+		rel="stylesheet"
+		href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
+	/>
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+		rel="stylesheet"
+	/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 	<script src="script/tickets.js" defer></script>
 	<script src="script/script.js" defer></script>
 </head>
@@ -22,7 +33,7 @@
 			</header>
 
 			<div class="main-container col-center">
-				<div id="main" class="col-center">
+				<div id="main" class="at col-center">
 					<a class="unused-tickets-btn" href="unused.html">
 						<div class="nr-tickets-container rectangle btn-hover">
 							<div class="nr-tickets">
@@ -33,48 +44,35 @@
 							<img class="nr-tickets-arrow" src="images\arrow-forward.png">
 						</div>
 					</a>
-
-					<div class="active-ticket-container">
-						<img class="active-ticket" src="images/biljett.png">
-						<div class="ticket-zone">Zon ABC</div>
-						<div class="ticket-type">
-							<div class="numberOfTicketsBox">
-								<div class="numberOfTicketsBoxText">
-									1
-								</div>
-							</div>
-							<div class="numberOfTicketsType">
-								Ungdom
-							</div>
-						</div>
+					<div id="active-ticket-container" class="scroll-x">
+						<!-- populated by JS -->
 					</div>
 				</div>
-
-
-				<footer>
-					<div id="icontray">
-						<a class="icon_box active" id="icon1" href="biljetter.html">
-							<div class="icon_image"></div>
-							<span class="icon_text">Biljetter</span>
-						</a>
-						<a class="icon_box" id="icon2" href="index.html">
-							<div class="icon_image"></div>
-							<span class="icon_text">Köp biljett</span>
-						</a>
-						<a class="icon_box" id="icon3">
-							<div class="icon_image"></div>
-							<span class="icon_text">Reseplanering</span>
-						</a>
-						<a class="icon_box" id="icon4">
-							<div class="icon_image"></div>
-							<span class="icon_text">Mitt konto</span>
-						</a>
-					</div>
-					<div id="homebutton_center">
-						<div id="homebutton"></div>
-					</div>
-				</footer>
 			</div>
+
+			<footer>
+				<div id="icontray">
+					<a class="icon_box active" id="icon1" href="biljetter.html">
+						<div class="icon_image"></div>
+						<span class="icon_text">Biljetter</span>
+					</a>
+					<a class="icon_box" id="icon2" href="index.html">
+						<div class="icon_image"></div>
+						<span class="icon_text">Köp biljett</span>
+					</a>
+					<a class="icon_box" id="icon3">
+						<div class="icon_image"></div>
+						<span class="icon_text">Reseplanering</span>
+					</a>
+					<a class="icon_box" id="icon4">
+						<div class="icon_image"></div>
+						<span class="icon_text">Mitt konto</span>
+					</a>
+				</div>
+				<div id="homebutton_center">
+					<div id="homebutton"></div>
+				</div>
+			</footer>
 		</div>
 	</div>
 	</div>
