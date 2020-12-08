@@ -204,7 +204,7 @@ const updateDiscount = () => {
   const finalPrice = Math.ceil(totalPrice * discount)
   const saved = Math.ceil(totalPrice - finalPrice)
 
-  discount5.innerHTML = fiveActive ? `Spara ${saved} kr;` : ''
+  discount5.innerHTML = fiveActive ? `Spara ${saved} kr` : ''
   discount10.innerHTML = !fiveActive ? `Spara ${saved} kr` : ''
   buybtnDisc.innerHTML = `- ${finalPrice} kr`
 }
