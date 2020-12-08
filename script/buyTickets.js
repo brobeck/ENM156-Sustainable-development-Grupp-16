@@ -186,31 +186,25 @@ const updateDiscount = () => {
     switch (chosenZone) {
       case 'a':
         return adultActive ? 34 : 26
-        break
       case 'ab':
         return adultActive ? 68 : 51
-        break
       case 'abc':
         return adultActive ? 102 : 77
-        break
       case 'b':
         return adultActive ? 34 : 26
-        break
       case 'bc':
         return adultActive ? 68 : 51
-        break
       case 'c':
         return adultActive ? 34 : 26
-        break
     }
   })(chosenZone)
 
-  const discount = fiveActive ? 0.8 : 0.75
+  const discount = fiveActive ? 0.9 : 0.85
   const totalPrice = (fiveActive ? 5 : 10) * ticketPrice
   const finalPrice = Math.ceil(totalPrice * discount)
   const saved = Math.ceil(totalPrice - finalPrice)
 
-  discount5.innerHTML = fiveActive ? `Spara ${saved} kr` : ''
+  discount5.innerHTML = fiveActive ? `Spara ${saved} kr;` : ''
   discount10.innerHTML = !fiveActive ? `Spara ${saved} kr` : ''
   buybtnDisc.innerHTML = `- ${finalPrice} kr`
 }
