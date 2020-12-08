@@ -45,7 +45,7 @@ function drawUnusedTickets() {
         <span>Zon</span>
         <span>${zone.toUpperCase()}</span>
       </div>
-        <a href="biljetter.html" class="activate-btn" 
+        <a href="biljetter.html" class="activate-btn"
         onclick="activate('${type}', '${zone}')">
           Aktivera
         </a>
@@ -60,9 +60,17 @@ function drawUnusedTickets() {
     .flat()
     .sort((a, b) => a.zone.localeCompare(b.zone))
 
-  tickets.forEach(
-    (ticket) => (ticketContainer.innerHTML += createTicket(ticket))
-  )
+  if (tickets.length === 0) {
+    $('#ticket-container').append(
+      $(`<div class="column max">
+          <span class="unused_text">Du har inga oanvända biljetter</span>
+          <div id="unused_image"></div>
+        </div>`)
+    )
+  } else
+    tickets.forEach(
+      (ticket) => (ticketContainer.innerHTML += createTicket(ticket))
+    )
 }
 
 drawUnusedTickets()

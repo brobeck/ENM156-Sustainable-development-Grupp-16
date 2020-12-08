@@ -1,7 +1,6 @@
 const activeTicketContainer = document.querySelector('#active-ticket-container')
 
 const activeTickets = JSON.parse(sessionStorage.getItem('activeTickets'))
-console.log(activeTickets)
 
 let unusedTickets = 0
 Object.values(JSON.parse(sessionStorage.getItem('unusedTickets'))).forEach(
@@ -39,19 +38,33 @@ const tickets = Object.entries(activeTickets)
   .flat()
   .sort((a, b) => a.zone.localeCompare(b.zone))
 
-console.log(tickets)
+if (tickets.length === 0) {
+  $('#active-ticket-container').append(
+    $(`<div class="column max">
+          <span class="unused_text">Du har inga aktiva biljetter</span>
+          <div id="unused_image"></div>
+        </div>`)
+  )
+} else
+  tickets.forEach(
+    (ticket) => (activeTicketContainer.innerHTML += createTicket(ticket))
+  )
 
-tickets.forEach(
-  (ticket) => (activeTicketContainer.innerHTML += createTicket(ticket))
-)
-
-console.log(window)
-
-// scroll stuff
-window.addEventListener('scroll', (e) => {
+// horizontal scroll (chrome only)
+activeTicketContainer.addEventListener('wheel', (e) => {
+  e.preventDefault()
+  const scrollDistance = 50
   console.log(e)
-  console.log($('#active-ticket-container').scrollTop())
-  // print "false" if direction is down and "true" if up
-  // console.log(this.oldScroll > this.scrollY)
-  this.oldScroll = this.scrollY
+  if (e.wheelDelta < 0) {
+    this.scrollX += scrollDistance
+  } else {
+    this.scrollX = this.scrollX <= 0 ? 0 : this.scrollX - scrollDistance
+  }
+  activeTicketContainer.scrollLeft = this.scrollX
+
+  if (activeTicketContainer.scrollLeft === this.prevScrollX) {
+    this.scrollX = this.prevScrollX
+  }
+
+  this.prevScrollX = activeTicketContainer.scrollLeft
 })

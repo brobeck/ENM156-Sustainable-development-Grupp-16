@@ -89,24 +89,29 @@
             </div>
 
             <div class="container_row cr_small_margin">
-              <span class="legend">Antal dagar</span>
+              <span class="legend">Antal biljetter</span>
             </div>
             <div class="container_row">
               <div id="number_select" class="rectangle slider extrathin white">
                 <div class="blue_select"></div>
                 <div class="outer_select">
                   <div class="left_select">
-                    <span>5 dagar</span>
+                    <span>5 biljetter</span>
+                    <span id="discount-5" class="subtext"></span>
                   </div>
                   <div class="right_select">
-                    <span>10 dagar</span>
+                    <span>10 biljetter</span>
+                    <span id="discount-10" class="subtext"></span>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="container_row">
+            <!-- <span id="discount-amount"></span> -->
+            <div class="container_row buybutton-container">
               <div id="buybutton" class="rectangle buygray thin">
-                <span class="buy-text">Till betalning</span>
+                <div id="buybutton-text">
+                  Till betalning <span id="buybutton-discount"></span>
+                </div>
               </div>
             </div>
           </div>

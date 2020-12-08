@@ -43,6 +43,7 @@ function logStorage() {
 }
 
 function pushUnusedTicket(type, zone, number) {
+  console.log('pushticket: ' + number)
   let unusedTickets = JSON.parse(sessionStorage.getItem('unusedTickets'))
   unusedTickets[type][zone] += number
   sessionStorage.setItem('unusedTickets', JSON.stringify(unusedTickets))
